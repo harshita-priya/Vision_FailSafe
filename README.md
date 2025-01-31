@@ -7,6 +7,7 @@ Autonomous driving technology has the potential to revolutionize transportation,
 One of the major causes of autonomous vehicle failures is **impaired vision due to environmental factors**. Rain, fog, dust, and low illumination can significantly degrade sensor and camera performance, leading to incorrect object detection and increased accident risks. The **Vision Fail-Safe (VFS) system** aims to ensure that autonomous driving remains safe and efficient under challenging visual conditions.
 
 ## System Architecture
+The system was developed entirely from scratch using custom datasets and annotation techniques tailored to specific autonomous driving requirements. Data annotation was meticulously designed to focus on challenging environmental conditions, ensuring high-quality labeled training data.
 The system architecture comprises the following key components:
 1. **Data Acquisition Module** - Collects real-world image and video data from onboard cameras.
 2. **Preprocessing Module** - Applies noise reduction, image enhancement, and augmentation techniques.
@@ -34,8 +35,10 @@ The system architecture comprises the following key components:
 
 ## Workflow (Pseudocode)
 ```python
-# Load Pretrained Model
-model = load_model('vision_failsafe_model.pth')
+# Load Custom Trained Model
+model = VisionFailSafeModel()
+model.load_state_dict(torch.load('vision_failsafe_model.pth'))
+model.eval()
 
 # Preprocessing Function
 def preprocess_image(image):
