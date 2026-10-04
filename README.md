@@ -1,4 +1,5 @@
 # Vision Fail-Safe Algorithm Development – RoboRide
+This repository contains project documentation only. Source code, datasets and trained models are proprietary to Hyundai Motor India Engineering and are not included.
 
 ## Overview
 Autonomous driving technology has the potential to revolutionize transportation, but it faces challenges related to vision impairments. This project focuses on developing a **Vision Fail-Safe (VFS) system** to enhance the robustness of self-driving cars by addressing vision-related issues such as **low illumination, sun glare, rain, fog, dust, and blur**.
